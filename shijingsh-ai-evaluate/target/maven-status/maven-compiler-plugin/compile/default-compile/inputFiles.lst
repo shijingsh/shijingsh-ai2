@@ -1,0 +1,15 @@
+D:\work\shshijing\shijingsh-ai\shijingsh-ai-evaluate\src\main\java\com\shijingsh\ai\evaluate\RatingEvaluator.java
+D:\work\shshijing\shijingsh-ai\shijingsh-ai-evaluate\src\main\java\com\shijingsh\ai\evaluate\ranking\PrecisionEvaluator.java
+D:\work\shshijing\shijingsh-ai\shijingsh-ai-evaluate\src\main\java\com\shijingsh\ai\evaluate\ranking\RecallEvaluator.java
+D:\work\shshijing\shijingsh-ai\shijingsh-ai-evaluate\src\main\java\com\shijingsh\ai\evaluate\rating\MPEEvaluator.java
+D:\work\shshijing\shijingsh-ai\shijingsh-ai-evaluate\src\main\java\com\shijingsh\ai\evaluate\rating\MSEEvaluator.java
+D:\work\shshijing\shijingsh-ai\shijingsh-ai-evaluate\src\main\java\com\shijingsh\ai\evaluate\RankingEvaluator.java
+D:\work\shshijing\shijingsh-ai\shijingsh-ai-evaluate\src\main\java\com\shijingsh\ai\evaluate\ranking\AUCEvaluator.java
+D:\work\shshijing\shijingsh-ai\shijingsh-ai-evaluate\src\main\java\com\shijingsh\ai\evaluate\ranking\MAPEvaluator.java
+D:\work\shshijing\shijingsh-ai\shijingsh-ai-evaluate\src\main\java\com\shijingsh\ai\evaluate\ranking\NoveltyEvaluator.java
+D:\work\shshijing\shijingsh-ai\shijingsh-ai-evaluate\src\main\java\com\shijingsh\ai\evaluate\ranking\NDCGEvaluator.java
+D:\work\shshijing\shijingsh-ai\shijingsh-ai-evaluate\src\main\java\com\shijingsh\ai\evaluate\ranking\MRREvaluator.java
+D:\work\shshijing\shijingsh-ai\shijingsh-ai-evaluate\src\main\java\com\shijingsh\ai\evaluate\rating\MAEEvaluator.java
+D:\work\shshijing\shijingsh-ai\shijingsh-ai-evaluate\src\main\java\com\shijingsh\ai\evaluate\Evaluator.java
+D:\work\shshijing\shijingsh-ai\shijingsh-ai-evaluate\src\main\java\com\shijingsh\ai\evaluate\AbstractEvaluator.java
+D:\work\shshijing\shijingsh-ai\shijingsh-ai-evaluate\src\main\java\com\shijingsh\ai\evaluate\ranking\DiversityEvaluator.java
