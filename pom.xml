@@ -7,7 +7,7 @@
         <version>7</version>
     </parent>
     <groupId>com.github.shijingsh</groupId>
-    <artifactId>shijingsh-ai</artifactId>
+    <artifactId>shijingsh-ai2</artifactId>
     <version>1.0.0</version>
 
     <modules>
@@ -23,7 +23,7 @@
     </modules>
 
     <packaging>pom</packaging>
-    <name>shijingsh-ai</name>
+    <name>shijingsh-ai2</name>
     <url>http://maven.apache.org</url>
 
 
@@ -35,8 +35,8 @@
         </license>
     </licenses>
     <scm>
-        <url>https://github.com/shijingsh/shijingsh-ai</url>
-        <connection>scm:git:git@github.com:shijingsh/shijingsh-ai.git</connection>
+        <url>https://github.com/shijingsh/shijingsh-ai2</url>
+        <connection>scm:git:git@github.com:shijingsh/shijingsh-ai2.git</connection>
         <developerConnection>https://github.com/shijingsh</developerConnection>
     </scm>
     <developers>
