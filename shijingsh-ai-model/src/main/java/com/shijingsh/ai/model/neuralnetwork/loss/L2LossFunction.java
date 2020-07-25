@@ -4,14 +4,6 @@ import com.shijingsh.ai.math.structure.MathCalculator;
 import com.shijingsh.ai.math.structure.matrix.GlobalMatrix;
 import com.shijingsh.ai.math.structure.matrix.MathMatrix;
 import com.shijingsh.ai.math.structure.matrix.MatrixScalar;
-import com.shijingsh.ai.math.structure.matrix.Nd4jMatrix;
-import org.nd4j.linalg.api.ndarray.INDArray;
-
-import com.shijingsh.ai.math.structure.MathCalculator;
-import com.shijingsh.ai.math.structure.matrix.GlobalMatrix;
-import com.shijingsh.ai.math.structure.matrix.MathMatrix;
-import com.shijingsh.ai.math.structure.matrix.MatrixScalar;
-import com.shijingsh.ai.math.structure.matrix.Nd4jMatrix;
 
 /**
  * L2目标函数
@@ -35,13 +27,13 @@ public class L2LossFunction implements LossFunction {
             for (int index = 0, size = testComponents.length; index < size; index++) {
                 score += calculateScore(testComponents[index], trainComponents[index]);
             }
-        } else if (tests instanceof Nd4jMatrix && trains instanceof Nd4jMatrix) {
+        }/* else if (tests instanceof Nd4jMatrix && trains instanceof Nd4jMatrix) {
             INDArray testArray = Nd4jMatrix.class.cast(tests).getArray();
             INDArray trainArray = Nd4jMatrix.class.cast(trains).getArray();
             INDArray scoreArray = trainArray.sub(testArray);
             scoreArray.muli(scoreArray);
             score = scoreArray.sumNumber().floatValue();
-        } else {
+        } */else {
             for (MatrixScalar term : trains) {
                 double value = term.getValue();
                 value = value - tests.getValue(term.getRow(), term.getColumn());
@@ -68,13 +60,13 @@ public class L2LossFunction implements LossFunction {
             for (int index = 0, size = testComponents.length; index < size; index++) {
                 calculateGradient(testComponents[index], trainComponents[index], gradientComponents[index]);
             }
-        } else if (tests instanceof Nd4jMatrix && trains instanceof Nd4jMatrix) {
+        } /*else if (tests instanceof Nd4jMatrix && trains instanceof Nd4jMatrix) {
             INDArray testArray = Nd4jMatrix.class.cast(tests).getArray();
             INDArray trainArray = Nd4jMatrix.class.cast(trains).getArray();
             INDArray gradientArray = Nd4jMatrix.class.cast(gradients).getArray();
             trainArray.sub(testArray, gradientArray);
             gradientArray.muli(2F);
-        } else {
+        }*/ else {
             gradients.iterateElement(MathCalculator.PARALLEL, (scalar) -> {
                 int row = scalar.getRow();
                 int column = scalar.getColumn();

@@ -1,23 +1,14 @@
 package com.shijingsh.ai.model.neuralnetwork.layer;
 
-import java.util.Map;
-
 import com.shijingsh.ai.math.structure.MathCache;
 import com.shijingsh.ai.math.structure.MathCalculator;
 import com.shijingsh.ai.math.structure.matrix.MathMatrix;
 import com.shijingsh.ai.math.structure.matrix.MatrixScalar;
-import com.shijingsh.ai.math.structure.matrix.Nd4jMatrix;
-import com.shijingsh.ai.model.neuralnetwork.activation.ActivationFunction;
-import org.apache.commons.math3.util.FastMath;
-import org.nd4j.linalg.api.ndarray.INDArray;
-
-import com.shijingsh.ai.math.structure.MathCalculator;
-import com.shijingsh.ai.math.structure.MathCache;
-import com.shijingsh.ai.math.structure.matrix.MathMatrix;
-import com.shijingsh.ai.math.structure.matrix.MatrixScalar;
-import com.shijingsh.ai.math.structure.matrix.Nd4jMatrix;
 import com.shijingsh.ai.model.neuralnetwork.activation.ActivationFunction;
 import com.shijingsh.core.utility.StringUtility;
+import org.apache.commons.math3.util.FastMath;
+
+import java.util.Map;
 
 /**
  * 权重层
@@ -69,10 +60,10 @@ public class WeightLayer extends AbstractLayer {
         Float weightRegularization = configurators.get(WEIGHT_KEY).getL1Regularization();
         MathMatrix weightParameters = parameters.get(WEIGHT_KEY);
         if (weightRegularization != null && weightParameters != null) {
-            if (weightParameters instanceof Nd4jMatrix) {
-                INDArray array = Nd4jMatrix.class.cast(weightParameters).getArray();
+            if (false) {
+/*                INDArray array = Nd4jMatrix.class.cast(weightParameters).getArray();
                 float norm = array.norm1Number().floatValue();
-                l1Sum += weightRegularization * norm;
+                l1Sum += weightRegularization * norm;*/
             } else {
                 float norm = 0F;
                 for (MatrixScalar term : weightParameters) {
@@ -86,10 +77,10 @@ public class WeightLayer extends AbstractLayer {
             Float biasRegularization = configurators.get(BIAS_KEY).getL1Regularization();
             MathMatrix biasParameters = parameters.get(BIAS_KEY);
             if (biasRegularization != null && biasParameters != null) {
-                if (biasParameters instanceof Nd4jMatrix) {
-                    INDArray array = Nd4jMatrix.class.cast(biasParameters).getArray();
+                if (false) {
+/*                    INDArray array = Nd4jMatrix.class.cast(biasParameters).getArray();
                     float norm = array.norm1Number().floatValue();
-                    l1Sum += biasRegularization * norm;
+                    l1Sum += biasRegularization * norm;*/
                 } else {
                     float norm = 0F;
                     for (MatrixScalar term : biasParameters) {
@@ -110,10 +101,10 @@ public class WeightLayer extends AbstractLayer {
         Float weightRegularization = configurators.get(WEIGHT_KEY).getL2Regularization();
         MathMatrix weightParameters = parameters.get(WEIGHT_KEY);
         if (weightRegularization != null && weightParameters != null) {
-            if (weightParameters instanceof Nd4jMatrix) {
-                INDArray array = Nd4jMatrix.class.cast(weightParameters).getArray();
+            if (false) {
+/*                INDArray array = Nd4jMatrix.class.cast(weightParameters).getArray();
                 float norm = array.norm2Number().floatValue();
-                l2Sum += 0.5F * weightRegularization * norm;
+                l2Sum += 0.5F * weightRegularization * norm;*/
             } else {
                 float norm = 0F;
                 for (MatrixScalar term : weightParameters) {
@@ -127,10 +118,10 @@ public class WeightLayer extends AbstractLayer {
             Float biasRegularization = configurators.get(BIAS_KEY).getL2Regularization();
             MathMatrix biasParameters = parameters.get(BIAS_KEY);
             if (biasRegularization != null && biasParameters != null) {
-                if (biasParameters instanceof Nd4jMatrix) {
-                    INDArray array = Nd4jMatrix.class.cast(biasParameters).getArray();
+                if (false) {
+/*                    INDArray array = Nd4jMatrix.class.cast(biasParameters).getArray();
                     float norm = array.norm2Number().floatValue();
-                    l2Sum += 0.5F * biasRegularization * norm;
+                    l2Sum += 0.5F * biasRegularization * norm;*/
                 } else {
                     float norm = 0F;
                     for (MatrixScalar term : biasParameters) {

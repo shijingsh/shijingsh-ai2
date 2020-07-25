@@ -208,7 +208,7 @@
                 <version>2.6</version>
             </dependency>
 
-            <dependency>
+<!--            <dependency>
                 <groupId>org.nd4j</groupId>
                 <artifactId>nd4j-api</artifactId>
                 <version>1.0.0-beta3</version>
@@ -230,7 +230,7 @@
                 <groupId>org.nd4j</groupId>
                 <artifactId>nd4j-cuda-9.2-platform</artifactId>
                 <version>1.0.0-beta3</version>
-            </dependency>
+            </dependency>-->
 
             <dependency>
                 <groupId>org.apache.parquet</groupId>

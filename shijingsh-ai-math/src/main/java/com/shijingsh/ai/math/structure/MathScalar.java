@@ -1,16 +1,9 @@
 package com.shijingsh.ai.math.structure;
 
+import com.shijingsh.ai.math.structure.vector.MathVector;
+import com.shijingsh.ai.math.structure.vector.VectorScalar;
+
 import java.util.Iterator;
-
-import com.shijingsh.ai.math.structure.vector.MathVector;
-import com.shijingsh.ai.math.structure.vector.Nd4jVector;
-import com.shijingsh.ai.math.structure.vector.VectorScalar;
-import org.nd4j.linalg.api.ndarray.INDArray;
-import org.nd4j.linalg.factory.Nd4j;
-
-import com.shijingsh.ai.math.structure.vector.MathVector;
-import com.shijingsh.ai.math.structure.vector.Nd4jVector;
-import com.shijingsh.ai.math.structure.vector.VectorScalar;
 
 /**
  * 数学标量
@@ -59,12 +52,7 @@ public interface MathScalar {
         float zero = 0F;
         float value = zero;
 
-        if (leftVector instanceof Nd4jVector && rightVector instanceof Nd4jVector) {
-            int size = rightVector.getElementSize();
-            INDArray leftArray = Nd4jVector.class.cast(leftVector).getArray();
-            INDArray rightArray = Nd4jVector.class.cast(rightVector).getArray();
-            value = (float) Nd4j.getBlasWrapper().level1().dot(size, one, leftArray, rightArray);
-        } else if (leftVector.isConstant() && rightVector.isConstant()) {
+        if (leftVector.isConstant() && rightVector.isConstant()) {
             for (int position = 0, size = leftVector.getElementSize(); position < size; position++) {
                 value += leftVector.getValue(position) * rightVector.getValue(position);
             }
@@ -127,12 +115,7 @@ public interface MathScalar {
         float zero = 0F;
         float value = zero;
 
-        if (leftVector instanceof Nd4jVector && rightVector instanceof Nd4jVector) {
-            int size = rightVector.getElementSize();
-            INDArray leftArray = Nd4jVector.class.cast(leftVector).getArray();
-            INDArray rightArray = Nd4jVector.class.cast(rightVector).getArray();
-            value = (float) Nd4j.getBlasWrapper().level1().dot(size, one, leftArray, rightArray);
-        } else if (leftVector.isConstant() && rightVector.isConstant()) {
+        if (leftVector.isConstant() && rightVector.isConstant()) {
             for (int position = 0, size = leftVector.getElementSize(); position < size; position++) {
                 value += leftVector.getValue(position) * rightVector.getValue(position);
             }
